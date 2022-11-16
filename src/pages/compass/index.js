@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { View, Text, StyleSheet, Image, Dimensions, BackHandler } from 'react-native'
+import { View, Text, StyleSheet, Image, Dimensions, BackHandler, Modal, ToastAndroid, TouchableOpacity, TouchableWithoutFeedback, TouchableNativeFeedback } from 'react-native'
 import {magnetometer, SensorTypes, setUpdateIntervalForType} from "react-native-sensors";
 import LPF from "lpf";
 import Geolocation from '@react-native-community/geolocation';
@@ -14,21 +14,28 @@ export default function Compass({ navigation }) {
   const [ latitude, setLatitude ] = useState("0")
   const [ longitude, setLongitude ] = useState("0")
   const [ kiblat, setKiblat ] = useState("")
+  const [ modal, setModal ] = useState(false)
 
   useEffect(() => {
     // const backHandler = BackHandler.addEventListener("hardwareBackPress", () => navigation.goBack())
     _subscribe()
-    Geolocation.getCurrentPosition(info => {
-      setLatitude(info.coords.latitude)
-      setLongitude(info.coords.longitude)
-      setKiblat(bearing( info.coords.latitude, info.coords.longitude ).toString().substr(0, 3))
-    })
+    getLocation()
     // return () => backHandler.remove()
   }, [])
 
   const _subscribe = async() => {
     setUpdateIntervalForType(SensorTypes.magnetometer, 16)
     magnetometer.subscribe(sensorData => setDegree(_angle(sensorData)), error => console.log(error))
+  }
+
+  const getLocation = () => {
+    Geolocation.getCurrentPosition((info) => {
+      setLatitude(info.coords.latitude)
+      setLongitude(info.coords.longitude)
+      setKiblat(bearing( info.coords.latitude, info.coords.longitude ).toString().substr(0, 3))
+    })
+
+    Geolocation.watchPosition(res => console.log(res), err => setModal(true))
   }
 
   const _degree = magnetometer => {
@@ -88,24 +95,46 @@ export default function Compass({ navigation }) {
   }
   
   const _direction = degree => {
-        if (degree >= 22.5 && degree < 67.5) {
-          return "NE";
-        } else if (degree >= 67.5 && degree < 112.5) {
-          return "E";
-        } else if (degree >= 112.5 && degree < 157.5) {
-          return "SE";
-        } else if (degree >= 157.5 && degree < 202.5) {
-          return "S";
-        } else if (degree >= 202.5 && degree < 247.5) {
-          return "SW";
-        } else if (degree >= 247.5 && degree < 292.5) {
-          return "W";
-        } else if (degree >= 292.5 && degree < 337.5) {
-          return "NW";
-        } else {
-          return "N";
-        }
-      };
+    if (degree >= 22.5 && degree < 67.5) {
+      return "NE";
+    } else if (degree >= 67.5 && degree < 112.5) {
+      return "E";
+    } else if (degree >= 112.5 && degree < 157.5) {
+      return "SE";
+    } else if (degree >= 157.5 && degree < 202.5) {
+      return "S";
+    } else if (degree >= 202.5 && degree < 247.5) {
+      return "SW";
+    } else if (degree >= 247.5 && degree < 292.5) {
+      return "W";
+    } else if (degree >= 292.5 && degree < 337.5) {
+      return "NW";
+    } else {
+      return "N";
+    }
+  }
+
+  const IsModal = () => {
+    return(
+        <Modal animationType="fade" transparent={true} visible={modal}>
+            <TouchableWithoutFeedback onPress={() => setModal(false)}>
+                <View style={style.backBtn} />
+            </TouchableWithoutFeedback>
+            <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+                <View style={style.modalContainer}>
+                    <TouchableOpacity onPress={() => setModal(false)} style={style.closeBtn}>
+                        <Text style={{ fontFamily: 'Comfortaa-Bold', color: '#F05454', fontSize: 19 }}>X</Text>
+                    </TouchableOpacity>
+                    <View style={{marginHorizontal: 20, marginTop: 20}}>
+                        <Text style={style.ket}>PERMISSIONS DENIED,</Text>
+                        <Text style={style.ket}>Beberapa fitur di aplikasi ini membutuhkan akses lokasi, Untuk pengalaman yang lebih baik harap aktifkan gps di perangkat anda.</Text>
+                        <Text style={style.ket}>Terimakasih.</Text>
+                    </View>
+                </View>
+            </View>
+        </Modal>
+    )
+  }
 
   return (
     <View style={style.container}>
@@ -128,21 +157,32 @@ export default function Compass({ navigation }) {
         <View style={{ height: width - 80, position: 'absolute', width: width - 80, alignItems: 'center', borderRadius: (width - 80) / 2, transform: [{ rotate: bearing(latitude, longitude) - _degree(degree) + "deg" }] }}>
           <Image source={require('../../assets/images/kaaba.png')} style={{ height: 30, width: 30, position: 'absolute', top: -25 }} />
         </View>
-        <Text style={style.degree}>{_degree(degree)}°</Text>
+        {latitude !== "0" ? <Text style={style.degree}>{_degree(degree)}°</Text> :
+        <TouchableNativeFeedback onPress={() => getLocation()}>
+          <View style={style.refreshBtn}>
+            <Text style={{ color: '#06283D' }}>Refresh</Text>
+          </View>
+        </TouchableNativeFeedback>}
       </View>
+      {IsModal()}
     </View>
   )
 }
 
 const style = StyleSheet.create({
     container: { flex: 1, backgroundColor: '#06283D', justifyContent: 'center', alignItems: 'center' },
-    title: { color: "#fff", fontSize: height / 26, fontWeight: "bold" },
+    title: { color: "#fff", fontSize: height / 26, fontWeight: "bold", fontFamily: 'Quicksand-Regular' },
     pointer: { height: height/26, marginTop: 30, marginBottom: 30 },
     bg: { height: width - 80, justifyContent: "center", alignItems: "center", resizeMode: "contain"},
     compassContainer: { justifyContent: 'center', alignItems: 'center' },
-    degree: { color: "#fff", fontSize: height / 27, width: width, position: "absolute", textAlign: "center" },
+    degree: { color: "#fff", fontSize: height / 27, width: width, position: "absolute", textAlign: "center", fontFamily: 'Quicksand-Regular' },
     containerHeader: { padding: 10, backgroundColor: '#FFF', borderRadius: 5, position: 'absolute', top: 20, right: 20, left: 20, alignItems:  'center', elevation: 3 },
     info: { flexDirection: 'row', justifyContent: 'space-between', borderBottomColor: '#425F57', borderBottomWidth: 0.5, paddingBottom: 10 },
     containerContent: { justifyContent: 'center', alignItems: 'center', width: '50%' },
-    text: { color: "#425F57", textAlign: "justify", fontSize: 17, fontWeight: '500' },
+    text: { color: "#425F57", textAlign: "justify", fontSize: 17, fontWeight: '500', fontFamily: 'Quicksand-Regular' },
+    backBtn: { position: 'absolute', top: 0, bottom: 0, right: 0, left: 0, backgroundColor: '#00000070' },
+    modalContainer: { width: '85%', backgroundColor: '#FFF', borderRadius: 10 },
+    closeBtn: { height: 30, width: 30, justifyContent: 'center', alignItems: 'center', alignSelf: 'flex-end' },
+    ket: { fontFamily: 'Quicksand-Regular', color: '#2C3333', lineHeight: 25, textAlign: 'justify', marginBottom: 20 },
+    refreshBtn: { height: 35, width: 100, borderRadius: 5, backgroundColor: '#FFF', justifyContent: 'center', alignItems: 'center', position: 'absolute' }
 })

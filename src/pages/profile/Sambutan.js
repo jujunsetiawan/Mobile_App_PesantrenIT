@@ -25,7 +25,7 @@ export default function Sambutan() {
 
 const styles = StyleSheet.create({
   container: { paddingHorizontal: 20 },
-  title: { fontWeight: "700", color: "#152D35", fontSize: 15, textAlign: "center", marginTop: 20 },
-  headText: { marginTop: 20 },
-  text: { color: "#152D35", fontWeight: "300", textAlign: "justify", lineHeight: 23 }
+  title: { color: "#152D35", fontSize: 15, textAlign: "center", marginTop: 20, fontFamily: 'Quicksand-Bold' },
+  headText: { marginTop: 20, fontFamily: 'Quicksand-Regular' },
+  text: { color: "#152D35", fontWeight: "300", textAlign: "justify", lineHeight: 23, fontFamily: 'Quicksand-Regular' }
 })

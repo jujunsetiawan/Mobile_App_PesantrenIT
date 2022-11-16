@@ -40,12 +40,12 @@ export default function ContactUS({ web, facebook, instagram, youtube, ikhwan, a
 
 const styles = StyleSheet.create({
     container: { padding: 20 },
-    title: { fontSize: 21, color: "#425F57", fontWeight: "300" },
+    title: { fontSize: 21, color: "#425F57", fontWeight: "300", fontFamily: 'Quicksand-Regular' },
     card: { padding: 20, backgroundColor: "#F7F7F7", borderRadius: 5, elevation: 3, marginTop: 20 },
-    subtitle: { fontSize: 17, fontWeight: "600", color: "#152D35" },
+    subtitle: { fontSize: 17, fontWeight: "600", color: "#152D35", fontFamily: 'Quicksand-Regular' },
     icon: {  tintColor: "#083AA9", width: 31, height: 31 },
     contactContainer: { flexDirection: "row", marginTop: 20 },
     content: { marginLeft: 20 },
-    titleContent: { fontSize: 15, fontWeight: "600", color: "#425F57" },
-    text: { color: "#425F57", textAlign: "justify", lineHeight: 20, marginTop: 10, fontWeight: "300" },
+    titleContent: { fontSize: 15, fontWeight: "600", color: "#425F57", fontFamily: 'Quicksand-Regular' },
+    text: { color: "#425F57", textAlign: "justify", lineHeight: 20, marginTop: 10, fontWeight: "300", fontFamily: 'Quicksand-Regular' },
 })

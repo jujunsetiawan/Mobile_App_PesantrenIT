@@ -16,5 +16,5 @@ export default function Achievement({ navigation }) {
 const styles = StyleSheet.create({
     container: { display: "flex", flex: 1, backgroundColor: "#F3F3F3" },
     text: { color: "#152D35", lineHeight: 25, textAlign: "center", marginTop: 30 },
-    contentContainer: { flex: 1, justifyContent: "center", alignItems: "center" }
+    contentContainer: { flex: 1, justifyContent: "center", alignItems: "center", fontFamily: 'Quicksand-Regular' }
 })

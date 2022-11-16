@@ -40,6 +40,6 @@ const styles = StyleSheet.create({
   conatinerList: { width: "100%", padding: 20 },
   buttonList: { padding: 10, marginBottom: 15 },
   onButtonList: { padding: 10, marginBottom: 15, backgroundColor: "#425F57", borderRadius: 5 },
-  text: { color: "#425F57", fontSize: 15 },
-  onText: { color: "#F3F3F3", fontSize: 15 },
+  text: { color: "#425F57", fontSize: 15, fontFamily: 'Quicksand-Regular' },
+  onText: { color: "#F3F3F3", fontSize: 15, fontFamily: 'Quicksand-Regular' },
 })

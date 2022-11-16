@@ -31,12 +31,12 @@ export default function Header({ city, date, countDown, onFinish, sholat }) {
 const styles = StyleSheet.create({
     containerBackground: { height: 300, width: "100%", backgroundColor: "#00000050", position: "absolute" },
     backgroundImg: { height: 300, width: "100%", position: "absolute" },
-    headerTitle: { color: "#F3F3F3", fontSize: 17, fontWeight: "500" },
+    headerTitle: { color: "#F3F3F3", fontSize: 17, fontWeight: "500", fontFamily: 'Quicksand-Regular' },
     headerContainer: { height: 70, justifyContent: "center", alignItems: "center", },
-    waktuSholat: { textAlign: "center", fontSize: 45, fontWeight: "300", color: "#F3F3F3" },
-    waktuPengingat: { textAlign: "center", color: "#F3F3F3"  },
-    day: { color: "#F3F3F3", fontSize: 21, fontWeight: "500" },
-    time: { color: "#F3F3F3" },
+    waktuSholat: { textAlign: "center", fontSize: 45, fontWeight: "300", color: "#F3F3F3", fontFamily: 'Quicksand-Regular' },
+    waktuPengingat: { textAlign: "center", color: "#F3F3F3", fontFamily: 'Quicksand-Regular'  },
+    day: { color: "#F3F3F3", fontSize: 21, fontWeight: "500", fontFamily: 'Quicksand-Regular' },
+    time: { color: "#F3F3F3", fontFamily: 'Quicksand-Regular' },
     containerTime: { position: "absolute", bottom: 20, left: 30 },
-    chooseCity: { color: "#F3F3F3", fontSize: 17, position: "absolute", bottom: 20, right: 35 }
+    chooseCity: { color: "#F3F3F3", fontSize: 17, position: "absolute", bottom: 20, right: 35, fontFamily: 'Quicksand-Regular' }
 })

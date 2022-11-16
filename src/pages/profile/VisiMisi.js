@@ -40,8 +40,8 @@ export default function VisiMisi({ contact }) {
 
 const styles = StyleSheet.create({
     container: { padding: 20 },
-    title: { fontWeight: "700", color: "#152D35", fontSize: 15, marginBottom: 10 },
-    text: { color: "#152D35", fontWeight: "300", textAlign: "justify", lineHeight: 23 },
+    title: { color: "#152D35", fontSize: 15, marginBottom: 10, fontFamily: 'Quicksand-Bold' },
+    text: { color: "#152D35", fontWeight: "300", textAlign: "justify", lineHeight: 23, fontFamily: 'Quicksand-Regular' },
     containerList: { flexDirection: "row" },
     card: { padding: 20, backgroundColor: "#F7F7F7", borderRadius: 5, elevation: 3, marginTop: 20 },
     button: { paddingVertical: 10, paddingHorizontal: 30, backgroundColor: "#425F57", borderRadius: 5, elevation: 1, alignItems: "center", marginTop: 20 }

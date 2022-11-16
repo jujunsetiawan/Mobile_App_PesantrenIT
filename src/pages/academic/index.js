@@ -15,6 +15,6 @@ export default function Academic({ navigation }) {
 
 const styles = StyleSheet.create({
     container: { display: "flex", flex: 1, backgroundColor: "#F3F3F3" },
-    text: { color: "#152D35", lineHeight: 25, textAlign: "center", marginTop: 30 },
+    text: { color: "#152D35", lineHeight: 25, textAlign: "center", marginTop: 30, fontFamily: 'Quicksand-Regular' },
     contentContainer: { flex: 1, justifyContent: "center", alignItems: "center" }
 })

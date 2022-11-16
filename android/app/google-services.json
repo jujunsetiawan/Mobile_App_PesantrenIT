@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "23703039230",
+    "project_id": "pesantrenit-a8b49",
+    "storage_bucket": "pesantrenit-a8b49.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:23703039230:android:c8ee3b1fafa277ac2c49af",
+        "android_client_info": {
+          "package_name": "com.pesantrenit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "23703039230-2r7lnur0oorf9q33oisn06gltl6bfq7f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD9SnrF3VKqqTIdiQT3Wz8Vt4M6cMhSmV4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "23703039230-2r7lnur0oorf9q33oisn06gltl6bfq7f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

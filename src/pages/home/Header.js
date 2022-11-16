@@ -30,9 +30,9 @@ const styles = StyleSheet.create({
     containerBackground: { height: 250, width: "100%", backgroundColor: "#00000090", position: "absolute" },
     backgroundImg: { height: 250, width: "100%", position: "absolute" },
     container: { height: 250, width: "100%", justifyContent: "center", alignItems: "center" },
-    title: { fontSize: 31, color: "#F3F3F3" },
-    subTitle: { color: "#F3F3F3", textAlign: "center", marginHorizontal: 25, fontSize: 12 },
+    title: { fontSize: 31, color: "#F3F3F3", fontFamily: 'Quicksand-Regular' },
+    subTitle: { color: "#F3F3F3", textAlign: "center", marginHorizontal: 25, fontSize: 12, fontFamily: 'Quicksand-Regular' },
     button: { height: 45, width: 150, justifyContent: "center", alignItems: "center", borderRadius: 5, backgroundColor: "#152D35", marginTop: 27, elevation: 3 },
-    titleButton: { color: "#F3F3F3" },
+    titleButton: { color: "#F3F3F3", fontFamily: 'Quicksand-Regular' },
     icon: { width: 30, height: 30, tintColor: "#FFFFFF" }
 })

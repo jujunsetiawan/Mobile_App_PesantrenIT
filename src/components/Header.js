@@ -16,5 +16,5 @@ export default function Header({ title, open }) {
 const styles = StyleSheet.create({
     container: { height: 50, backgroundColor: "#FFFFFF", elevation: 3, flexDirection: "row", alignItems: "center", paddingHorizontal: 10, justifyContent: "space-between" },
     menu: { width: 30, height: 30, tintColor: "#425F57" },
-    title: { color: "#425F57", fontSize: 17, fontWeight: "500" }
+    title: { color: "#425F57", fontSize: 17, fontWeight: "500", fontFamily: 'Quicksand-Bold' }
 })

@@ -42,7 +42,7 @@ export default function Home({ navigation }) {
       <ScrollView showsVerticalScrollIndicator={false}>
         <Header open={() => navigation.openDrawer()} onClick={() => openUrl("https://pendaftaran.pesantrenit.com/form-register1")} />
         <Tanggal kiblat={() => navigation.navigate('Compass')} />
-        <Menu sholat={() => navigation.navigate("Sholat")} />
+        <Menu sholat={() => navigation.navigate("Sholat")} daftar={() => navigation.navigate("Requirtment")} contact={() => navigation.navigate("Contact US")} artikel={() => navigation.navigate("News")} program={() => navigation.navigate("Academic")} />
         <ListYoutube subs={() => openUrl("https://www.youtube.com/channel/UCgVkipz_0i-rBDHzQjnO0og/featured")} />
         <SwiperList/>
         <Why/>

@@ -37,7 +37,7 @@ export default function ListYoutube({ subs }) {
 
 const styles = StyleSheet.create({
     container: { marginHorizontal: 20, backgroundColor: "#FFFFFF", borderRadius: 5, elevation: 3, padding: 20 },
-    text: { color: "#425F57", textAlign: "justify" },
+    text: { color: "#425F57", textAlign: "justify", fontFamily: 'Quicksand-Regular' },
     containerBtnSubs: { backgroundColor: "#D2001A", paddingVertical: 5, paddingHorizontal: 15, borderRadius: 5, marginLeft: 15 },
     header: { flexDirection: 'row', alignItems: "center" },
     containerContent: { marginTop: 15, flexDirection: "row" },

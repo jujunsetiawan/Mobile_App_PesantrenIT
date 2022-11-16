@@ -35,8 +35,8 @@ export default function Agenda({ pdf }) {
 
 const styles = StyleSheet.create({
     container: { paddingHorizontal: 20 },
-    title: { fontSize: 21, color: "#425F57", fontWeight: "300" },
+    title: { fontSize: 21, color: "#425F57", fontWeight: "300", fontFamily: 'Quicksand-Regular' },
     containerList: { flexDirection: "row", marginTop: 10 },
-    text: { color: "#152D35", textAlign: "justify", lineHeight: 20 },
+    text: { color: "#152D35", textAlign: "justify", lineHeight: 20, fontFamily: 'Quicksand-Regular' },
     containerList: { flexDirection: "row", marginTop: 10 }
 })

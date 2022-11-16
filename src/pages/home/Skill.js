@@ -28,8 +28,8 @@ export default function Skill() {
 
 const styles = StyleSheet.create({
     container: { paddingTop: 25, paddingHorizontal: 20 },
-    title: { color: "#425F57", fontSize: 17, fontWeight: "600" },
-    text: { color: "#053742", marginTop: 10, lineHeight: 25, textAlign: "justify" },
+    title: { color: "#425F57", fontSize: 17, fontWeight: "600", fontFamily: 'Quicksand-Regular' },
+    text: { color: "#053742", marginTop: 10, lineHeight: 25, textAlign: "justify", fontFamily: 'Quicksand-Regular' },
     card: { width: "100%", paddingHorizontal: 20, borderWidth: 0.5, marginTop: 20, borderRadius: 5, borderColor: "#17D7A0" },
     line: { width: "100%", borderWidth: 0.5, borderColor: "#17D7A0", marginTop: 5 },
 })

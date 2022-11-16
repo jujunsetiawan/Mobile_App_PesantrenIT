@@ -24,9 +24,9 @@ export default function Persyaratan() {
 
 const styles = StyleSheet.create({
     container: { padding: 20 },
-    title: { fontSize: 21, color: "#425F57", fontWeight: "300", marginTop: 20 },
-    subTitle: { fontSize: 11, color: "#425F57", lineHeight: 17, marginTop: 5, textAlign: "justify", opacity: 0.7},
-    judul: { color: "#152D35", fontWeight: "500", marginTop: 20, fontSize: 15 },
+    title: { fontSize: 21, color: "#425F57", fontWeight: "300", marginTop: 20, fontFamily: 'Quicksand-Regular' },
+    subTitle: { fontSize: 11, color: "#425F57", lineHeight: 17, marginTop: 5, textAlign: "justify", opacity: 0.7, fontFamily: 'Quicksand-Regular' },
+    judul: { color: "#152D35", fontWeight: "500", marginTop: 20, fontSize: 15, fontFamily: 'Quicksand-Regular' },
     containerList: { flexDirection: "row", marginTop: 10 },
-    text: { color: "#152D35", textAlign: "justify" }
+    text: { color: "#152D35", textAlign: "justify", fontFamily: 'Quicksand-Regular' }
 })

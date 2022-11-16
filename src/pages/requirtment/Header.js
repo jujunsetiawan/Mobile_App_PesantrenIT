@@ -22,9 +22,9 @@ export default function Header({ onDaftar, open }) {
 const styles = StyleSheet.create({
     container: { alignItems: "center" },
     img: { width: 200, height: 130, marginVertical: 20 },
-    title: { fontSize: 21, fontWeight: "300", color: "#425F57" },
-    text: { textAlign: "center", fontSize: 13, marginTop: 10, lineHeight: 23, marginHorizontal: 40, color: "#425F57" },
+    title: { fontSize: 21, fontWeight: "300", color: "#425F57", fontFamily: 'Quicksand-Regular' },
+    text: { textAlign: "center", fontSize: 13, marginTop: 10, lineHeight: 23, marginHorizontal: 40, color: "#425F57", fontFamily: 'Quicksand-Regular' },
     button: { paddingVertical: 10, paddingHorizontal: 30, backgroundColor: "#425F57", borderRadius: 5, marginTop: 20 },
-    titleBtn: { color: "#F3F3F3", fontWeight: "500" },
+    titleBtn: { color: "#F3F3F3", fontWeight: "500", fontFamily: 'Quicksand-Regular' },
     icon: { alignSelf: "flex-start", margin: 20, tintColor: "#425F57" }
 })

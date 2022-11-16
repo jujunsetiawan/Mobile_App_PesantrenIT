@@ -8,9 +8,9 @@ export default function ListSchedule({ waktu, jam, onBell, bell }) {
         <Text style={styles.time}>{waktu}</Text>
         <Text style={styles.time}>{jam}</Text>
       </View>
-      {/* <Image source={{ uri: "https://i.ibb.co/QvmH8Rz/bell.png" }} style={styles.icon} /> */}
+      {/* <Image source={{ uri: "https://i.ibb.co/wKPS7w4/no-bell.png" }} style={styles.icon} /> */}
       <TouchableOpacity onPress={onBell}>
-        <Image source={{ uri: "https://i.ibb.co/wKPS7w4/no-bell.png" }} style={styles.icon} />
+        <Image source={{ uri: "https://i.ibb.co/QvmH8Rz/bell.png" }} style={styles.icon} />
       </TouchableOpacity>
     </View>
   )

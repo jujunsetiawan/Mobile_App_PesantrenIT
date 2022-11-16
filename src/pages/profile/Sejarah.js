@@ -12,6 +12,6 @@ export default function Sejarah() {
 
 const styles = StyleSheet.create({
     container: { padding: 20, marginTop: 20 },
-    title: { fontWeight: "700", color: "#152D35", fontSize: 15, marginBottom: 20 },
-    text: { color: "#152D35", fontWeight: "300", textAlign: "justify", lineHeight: 23 }
+    title: { color: "#152D35", fontSize: 15, marginBottom: 20, fontFamily: 'Quicksand-Bold' },
+    text: { color: "#152D35", fontWeight: "300", textAlign: "justify", lineHeight: 23, fontFamily: 'Quicksand-Regular' }
 })
