@@ -18,7 +18,7 @@ export default function ListSchedule({ waktu, jam, onBell, bell }) {
 
 const styles = StyleSheet.create({
   listItem: { flexDirection: "row", justifyContent: "space-between", alignItems: "center", paddingVertical: 15, paddingHorizontal: 5 },
-  time: { fontSize: 19, color: "#425F57" },
+  time: { fontSize: 19, color: "#425F57", fontFamily: 'Quicksand-Regular' },
   containerTime: { flexDirection: 'row', width: '80%', justifyContent: 'space-between' },
   icon: { height: 30, width: 30 }
 })

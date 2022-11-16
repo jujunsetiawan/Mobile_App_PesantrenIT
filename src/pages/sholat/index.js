@@ -167,6 +167,6 @@ const styles = StyleSheet.create({
     backBtn: { position: 'absolute', top: 0, bottom: 0, right: 0, left: 0, backgroundColor: '#00000070' },
     modalContainer: { width: '85%', backgroundColor: '#FFF', borderRadius: 10 },
     closeBtn: { height: 30, width: 30, justifyContent: 'center', alignItems: 'center', alignSelf: 'flex-end' },
-    ket: { fontFamily: 'Comfortaa-Medium', color: '#2C3333', lineHeight: 25, textAlign: 'justify', marginBottom: 20 },
+    ket: { fontFamily: 'Quicksand-Regular', color: '#2C3333', lineHeight: 25, textAlign: 'justify', marginBottom: 20 },
     refreshBtn: { backgroundColor: '#425F57', alignSelf: 'center', height: 35, justifyContent: 'center', width: 100, alignItems: 'center', borderRadius: 5, marginTop: 150 }
 })
